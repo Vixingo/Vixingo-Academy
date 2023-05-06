@@ -8,6 +8,7 @@ function Compare() {
             <Box
                 sx={{
                     py: 8,
+                    px: 2,
                     backgroundColor: "red",
                     textAlign: "center",
                     background: "#000",

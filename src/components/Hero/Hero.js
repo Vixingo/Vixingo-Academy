@@ -12,6 +12,7 @@ function Hero() {
                     backgroundSize: "auto 100%",
                     color: "#fff",
                     py: 6,
+                    px: 2,
                 }}
             >
                 <Box sx={{ pb: 6 }}>

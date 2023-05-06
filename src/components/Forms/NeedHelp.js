@@ -9,12 +9,14 @@ import {
     Alert,
     IconButton,
     Collapse,
+    Snackbar,
 } from "@mui/material";
 import axios from "axios";
-
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 function NeedHelp() {
     const [open, setOpen] = React.useState("");
     const [status, setStatus] = React.useState("");
+    const [msg, setMsg] = React.useState("");
     const [errors, setErrors] = React.useState(false);
     const [filled, setFilled] = React.useState(false);
     const [mail, setmail] = React.useState(false);
@@ -34,7 +36,7 @@ function NeedHelp() {
         if (user.phone.toString().length === 14) {
             setphn(false);
             setErrors(false);
-            console.log(user.phone);
+            // console.log(user.phone);
         } else {
             setphn(true);
             setErrors(true);
@@ -53,9 +55,10 @@ function NeedHelp() {
             setmail(false);
             setErrors(false);
         }
+
         if (errors === false) {
             axios
-                .post("https://vixingo.com/apis/save_user_leads.php", {
+                .post("https://vixingo.com/apis/save_other_leads.php", {
                     api_key: "KjaLHoOASHDjaUOxyqHikKASndwioerUH",
                     user_name: x.name,
                     user_email: x.email,
@@ -67,10 +70,12 @@ function NeedHelp() {
                     setOpen(true);
                     if (response.data.status) {
                         setStatus(response.data.status);
+                        setMsg(response.data.msg);
                         // if (response.data.status === "Failed") {
                         // setSeverity("error");
                         // } else setSeverity("success");
                     } else {
+                        setMsg(response.data.msg);
                         setStatus(response.data.warning);
                         // setSeverity("warning");
                     }
@@ -187,12 +192,12 @@ function NeedHelp() {
                                                 setOpen(false);
                                             }}
                                         >
-                                            x
+                                            <CloseRoundedIcon fontSize="inherit" />{" "}
                                         </IconButton>
                                     }
                                     sx={{ mb: 2 }}
                                 >
-                                    {status}
+                                    {msg}
                                 </Alert>
                             </Collapse>
                             <Box

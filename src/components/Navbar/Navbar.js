@@ -66,7 +66,8 @@ function DrawerAppBar(props) {
                     style={{ height: "27px" }}
                     src="/img/logo.png"
                     alt="logo"
-                />
+                />{" "}
+                <Typography sx={{ color: "#fff" }}>ACADEMY</Typography>
             </Box>
             <Divider />
             <List>
