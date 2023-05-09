@@ -67,7 +67,6 @@ function DrawerAppBar(props) {
                     src="/img/logo.png"
                     alt="logo"
                 />{" "}
-                <Typography sx={{ color: "#fff" }}>ACADEMY</Typography>
             </Box>
             <Divider />
             <List>
@@ -168,6 +167,7 @@ function DrawerAppBar(props) {
                                 fontSize: "19px",
                                 cursor: "pointer",
                                 alignItems: "center",
+                                mt: 1,
                             }}
                         >
                             <Link to="/">

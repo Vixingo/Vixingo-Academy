@@ -89,8 +89,7 @@ function NeedHelp() {
         <>
             <Container
                 sx={{
-                    paddingTop: "150px",
-                    paddingBottom: "80px",
+                    py: 8,
                     color: "#fff",
                 }}
             >
@@ -212,7 +211,7 @@ function NeedHelp() {
                                 >
                                     Write to us
                                 </Typography>
-                                <Box sx={{ display: "flex" }}>
+                                <Box sx={{ display: { sm: "flex" } }}>
                                     <TextField
                                         variant="standard"
                                         label="Your Name"

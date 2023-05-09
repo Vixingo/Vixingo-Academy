@@ -10,6 +10,7 @@ function OurCourses() {
                         container
                         sx={{
                             backgroundColor: "#000",
+                            overflow: "hidden",
                         }}
                     >
                         <Grid item sm={12} md={6}>

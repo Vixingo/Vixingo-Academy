@@ -15,8 +15,13 @@ function Course() {
                                 backgroundImage: "url(/img/tet.webp)",
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
+                                height: "100%",
                             }}
-                        ></Grid>
+                        >
+                            <Box sx={{ width: "100%" }}>
+                                {/* <img src="img/tet.webp" alt="" height="100%" /> */}
+                            </Box>
+                        </Grid>
                         <Grid item sm={12} md={6} sx={{ p: 3 }}>
                             <Box sx={{ color: "#fff", p: 4 }}>
                                 {" "}

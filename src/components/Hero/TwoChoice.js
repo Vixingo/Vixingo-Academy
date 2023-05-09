@@ -4,7 +4,7 @@ import React from "react";
 function TwoChoice() {
     return (
         <>
-            <Box sx={{ textAlign: "center", py: 5 }}>
+            <Box sx={{ textAlign: "center", py: 5, px: 2 }}>
                 <Typography variant="h1"> You Have Two Choices </Typography>
                 <Typography
                     variant="h5"

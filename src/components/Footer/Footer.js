@@ -5,7 +5,7 @@ function Footer() {
     return (
         <>
             {" "}
-            <Container sx={{ paddingBottom: "20px" }}>
+            <Container sx={{ paddingBottom: "14px" }}>
                 <Box
                     sx={{
                         display: "flex",
@@ -14,15 +14,10 @@ function Footer() {
                         textAlign: { xs: "center", md: "unset" },
                     }}
                 >
-                    <Box>
-                        <Typography sx={{ fontSize: "14px", mb: 2 }}>
-                            Copyright VIXINGO 2023
-                        </Typography>
-                    </Box>
                     <Box
                         sx={{
                             display: "flex",
-
+                            mb: 1,
                             justifyContent: { xs: "center", md: "unset" },
                         }}
                     >
@@ -36,6 +31,11 @@ function Footer() {
                         </Typography>
                         <Typography sx={{ fontSize: "14px" }}>
                             Site map
+                        </Typography>
+                    </Box>
+                    <Box>
+                        <Typography sx={{ fontSize: "14px" }}>
+                            Copyright VIXINGO 2023
                         </Typography>
                     </Box>
                 </Box>

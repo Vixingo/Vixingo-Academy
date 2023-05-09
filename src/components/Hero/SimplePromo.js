@@ -6,10 +6,11 @@ function SimplePromo() {
         <>
             <Box
                 sx={{
-                    py: 3,
+                    py: 2,
                     backgroundColor: "#121212",
                     color: "#fff",
                     textAlign: "center",
+                    px: 1,
                 }}
             >
                 <Box>
