@@ -15,7 +15,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container, Menu, MenuItem } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const drawerWidth = 240;
 const navItems = [
@@ -34,6 +34,9 @@ const navItems = [
 ];
 
 function DrawerAppBar(props) {
+    const location = useLocation();
+
+    console.log(location.pathname);
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -97,15 +100,19 @@ function DrawerAppBar(props) {
                 <Container>
                     {" "}
                     <Toolbar>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            edge="start"
-                            onClick={handleOpenNavMenu}
-                            sx={{ mr: 2, display: { md: "none" } }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
+                        {location.pathname.includes("/admin") ? (
+                            ""
+                        ) : (
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                edge="start"
+                                onClick={handleOpenNavMenu}
+                                sx={{ mr: 2, display: { md: "none" } }}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                        )}
 
                         <Menu
                             id="menu-appbar"
@@ -178,33 +185,46 @@ function DrawerAppBar(props) {
                                 />
                             </Link>
                         </Box>
-                        <Box sx={{ display: { xs: "none", md: "block" } }}>
-                            {navItems.map((item) => (
-                                <Link to={item.url}>
-                                    <Button sx={{ color: "#fff" }}>
-                                        <Typography>{item.title}</Typography>
+                        {location.pathname.includes("/admin") ? (
+                            ""
+                        ) : (
+                            <>
+                                <Box
+                                    sx={{
+                                        display: { xs: "none", md: "block" },
+                                    }}
+                                >
+                                    {navItems.map((item) => (
+                                        <Link to={item.url}>
+                                            <Button sx={{ color: "#fff" }}>
+                                                <Typography>
+                                                    {item.title}
+                                                </Typography>
+                                            </Button>
+                                        </Link>
+                                    ))}
+                                </Box>
+                                <Link to="/sign-up">
+                                    <Button
+                                        variant="outlined"
+                                        sx={{
+                                            // border: "1px solid #fff",
+                                            width: "134px",
+                                            height: "40px",
+                                            fontSize: "14px",
+                                            ml: 2,
+                                            fontWeight: "400",
+                                        }}
+                                    >
+                                        Enroll Now
                                     </Button>
                                 </Link>
-                            ))}
-                        </Box>
-                        <Link to="/sign-up">
-                            <Button
-                                variant="outlined"
-                                sx={{
-                                    // border: "1px solid #fff",
-                                    width: "134px",
-                                    height: "40px",
-                                    fontSize: "14px",
-                                    ml: 2,
-                                    fontWeight: "400",
-                                }}
-                            >
-                                Enroll Now
-                            </Button>
-                        </Link>
+                            </>
+                        )}
                     </Toolbar>
                 </Container>
             </AppBar>
+
             <Box component="nav">
                 <Drawer
                     container={container}
@@ -225,6 +245,7 @@ function DrawerAppBar(props) {
                     {drawer}
                 </Drawer>
             </Box>
+
             <Box component="main">
                 <Toolbar />
             </Box>

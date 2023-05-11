@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import ReferPage from "./Pages/ReferPage";
 import { SnackbarProvider } from "notistack";
+import AdminLogin from "./Pages/AdminLogin";
+import DashboardPage from "./Pages/DashboardPage";
 
 function App() {
     return (
@@ -22,6 +24,8 @@ function App() {
                             element={<ReferPage />}
                         />
                         <Route path="/sign-up" element={<SignUpPage />} />
+                        <Route path="/admin" element={<DashboardPage />} />
+                        <Route path="/admin/login" element={<AdminLogin />} />
                     </Routes>
                     <Footer />
                 </BrowserRouter>

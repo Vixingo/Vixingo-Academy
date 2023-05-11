@@ -5,7 +5,7 @@ function Footer() {
     return (
         <>
             {" "}
-            <Container sx={{ paddingBottom: "14px" }}>
+            <Container sx={{ paddingBottom: "14px", pt: "10px" }}>
                 <Box
                     sx={{
                         display: "flex",
