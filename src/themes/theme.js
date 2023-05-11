@@ -15,21 +15,21 @@ export const theme = createTheme({
 
             fontWeight: "700",
             "@media (max-width:600px)": {
-                fontSize: "24px",
+                fontSize: "32px",
             },
         },
         h2: {
             fontSize: "32px",
             fontWeight: "700",
             "@media (max-width:600px)": {
-                fontSize: "24px",
+                fontSize: "28px",
             },
         },
         h3: {
             fontSize: "28px",
             fontWeight: "600",
             "@media (max-width:600px)": {
-                fontSize: "16px",
+                fontSize: "24px",
             },
         },
         h4: {
@@ -38,7 +38,7 @@ export const theme = createTheme({
         },
         h5: {
             fontSize: "20px",
-            fontWeight: "500",
+            fontWeight: "600",
         },
         h6: {
             fontSize: "18px",

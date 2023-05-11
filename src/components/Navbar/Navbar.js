@@ -127,13 +127,13 @@ function DrawerAppBar(props) {
                         >
                             {navItems.map((data) => {
                                 return (
-                                    <MenuItem onClick={handleCloseNavMenu}>
-                                        <Link to={data.url}>
+                                    <Link to={data.url}>
+                                        <MenuItem onClick={handleCloseNavMenu}>
                                             <Typography>
                                                 {data.title}
                                             </Typography>
-                                        </Link>
-                                    </MenuItem>
+                                        </MenuItem>
+                                    </Link>
                                 );
                             })}
 
@@ -199,7 +199,7 @@ function DrawerAppBar(props) {
                                     fontWeight: "400",
                                 }}
                             >
-                                Join us
+                                Enroll Now
                             </Button>
                         </Link>
                     </Toolbar>
