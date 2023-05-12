@@ -85,31 +85,31 @@ const headCells = [
         id: "name",
         numeric: false,
         disablePadding: true,
-        label: "Dessert (100g serving)",
+        label: "Name",
     },
     {
         id: "calories",
         numeric: true,
         disablePadding: false,
-        label: "Calories",
+        label: "Email",
     },
     {
         id: "fat",
         numeric: true,
         disablePadding: false,
-        label: "Fat (g)",
+        label: "Phone",
     },
     {
         id: "carbs",
         numeric: true,
         disablePadding: false,
-        label: "Carbs (g)",
+        label: "Info",
     },
     {
         id: "protein",
         numeric: true,
         disablePadding: false,
-        label: "Protein (g)",
+        label: "Info",
     },
 ];
 
